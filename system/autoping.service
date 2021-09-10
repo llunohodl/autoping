@@ -1,0 +1,10 @@
+[Unit]
+Description=Ping hosts specified in ping.list file
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /usr/bin/autoping.py
+
+[Install]
+WantedBy=default.target
